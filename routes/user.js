@@ -23,7 +23,6 @@ router.post('/auth/login', async (req, res, next) => {
                 ...req.body,
             }
         );
-        console.log(response.data.token);
         res.render('index', { token: response.data.token });
     } catch (err) {
         res.render('login', {
