@@ -1,0 +1,13 @@
+extend layout
+
+
+block scripts
+    script.
+        const token = "#{token}";
+        if(token !== "" && token !== undefined) 
+            localStorage.setItem('token',JSON.stringify(token)) 
+
+
+block content
+    div.container
+        h2 Home page

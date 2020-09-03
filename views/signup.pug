@@ -1,0 +1,19 @@
+extend layout
+
+block content
+    div.container
+        if message !== "" && message !== undefined
+            div.container__message #{message}
+        form(action="/user/auth/signup" method="POST").container__form
+            h2 Signup
+            input(placeholder="firstname" required type="text" name="firstname" )
+            input(placeholder="lastname" required type="text" name="lastname" )
+            input(placeholder="email" required type="email" name="email" )
+            input(placeholder="password" required type="password" name="password" )
+            input(placeholder="age" required type="number" name="age" )
+            button(type="submit") create account
+
+        div.container__loginRedirect
+            p Already have an account? 
+            a(href="/user/login") Login
+

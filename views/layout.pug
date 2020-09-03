@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/main.css')
+        block scripts
+            script.
+                function getToken(){
+                    const userToken = localStorage.getItem('token');
+                    return userToken !== "" ? userToken : null;
+                }
+    body
+        if false
+            nav
+                h2 Pug
+                ul
+                    li 
+                        a(href="/") home
+                    li 
+                        a(href="/profile") Profile
+        else
+            nav
+                h2 Pug
+                ul
+                    li 
+                        a(href="/") home
+                    li 
+                        a(href="/signup") signup
+                    li 
+                        a(href="/login") login
+        block content
